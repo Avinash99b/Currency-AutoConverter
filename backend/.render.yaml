@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: currency-api
-    env: php
-    buildCommand: ""
-    startCommand: ""
-    plan: free
