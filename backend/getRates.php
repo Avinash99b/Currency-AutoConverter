@@ -1,9 +1,7 @@
 <?php
 // getRates.php
 
-$CACHE_DIR = __DIR__ . '/cache';
-
-$CACHE_FILE = $CACHE_DIR . '/rates.json';
+$CACHE_FILE = __DIR__ . '/cache/rates.json';
 
 if (!file_exists($CACHE_FILE)) {
     http_response_code(503);
