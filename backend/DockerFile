@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN mkdir -p cache
+# Ensure cache directory exists and is writable
+RUN mkdir -p cache && chmod 777 cache
 
 CMD ["php", "-S", "0.0.0.0:8080"]
