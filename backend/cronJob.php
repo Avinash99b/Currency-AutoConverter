@@ -1,9 +1,8 @@
 <?php
-$CACHE_DIR = __DIR__ . '/cache';
+$CACHE_DIR = sys_get_temp_dir();  // ✅ writable on Railway
 $CACHE_FILE = $CACHE_DIR . '/rates.json';
 $TIMESTAMP_FILE = $CACHE_DIR . '/last_updated.txt';
 
-// Load .env manually (since we're not using a framework)
 $env = parse_ini_file(__DIR__ . '/.env');
 $API_KEY = isset($env['EXCHANGE_API_KEY']) ? $env['EXCHANGE_API_KEY'] : null;
 
@@ -12,10 +11,8 @@ if (!$API_KEY) {
     exit;
 }
 
-
 $API_URL = "https://v6.exchangerate-api.com/v6/{$API_KEY}/latest/USD";
 
-// Ensure cache directory exists
 if (!file_exists($CACHE_DIR)) {
     mkdir($CACHE_DIR, 0755, true);
 }
