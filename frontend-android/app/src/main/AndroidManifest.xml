@@ -45,7 +45,15 @@
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
         </service>
-
+        <service
+            android:name=".Services.OverlayService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse|systemExempted"
+            android:permission="android.permission.FOREGROUND_SERVICE">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Hello Guys" />
+        </service>
     </application>
 
 </manifest>
