@@ -16,11 +16,12 @@ Auto Currency Converter is an Android app that uses an **AccessibilityService** 
   Detects currency strings like: £30, $99.50, ₹2500, €10.75
 
 - ⚡ **Instant Conversion via Toast**  
-  Matches currency text using regex and shows:
+  Matches currency text using regex and shows: "$99 ≈ ₹8250"
 
-   "$99 ≈ ₹8250"
-
-
+- 🖼️ **OCR detection** using ML Kit + MediaProjection
+- 🧊 **Floating overlay UI** instead of toasts
+- 🌍 **Live exchange rates** via open APIs
+- 🎯 OCR limited to user-highlighted screen area
 - 🌐 **Customizable Rates**  
   Uses hardcoded or dynamic exchange rates for local conversion (e.g., £1 = ₹105).
 
@@ -34,6 +35,7 @@ Auto Currency Converter is an Android app that uses an **AccessibilityService** 
 4. Matches against a regex pattern like `[£$€₹]\s?\d+(\.\d{1,2})?`.
 5. Converts the amount using predefined logic.
 6. Displays a toast with the converted value.
+7. In case the long touch
 
 ---
 
@@ -106,18 +108,6 @@ Toast: "£30 ≈ ₹3150"
 - No text is stored or sent anywhere.
 - Everything is processed **locally** on-device.
 - The app only reacts to **user-initiated text selections**.
-
----
-
-## 🧭 Roadmap
-
-🚧 This is the main branch with core functionality.
-
-🔜 Upcoming branches will add:
-- 🖼️ **OCR detection** using ML Kit + MediaProjection
-- 🧊 **Floating overlay UI** instead of toasts
-- 🌍 **Live exchange rates** via open APIs
-- 🎯 OCR limited to user-highlighted screen area
 
 ---
 
