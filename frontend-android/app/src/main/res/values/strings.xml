@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Auto Currency Converter</string>
+    <string name="accessibility_desc">ClipConvert monitors long presses and converts the currency from source to default currency instantly.</string>
+</resources>
